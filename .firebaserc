@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "alltrails-88e15": {
+      "hosting": {
+        "angular-todo": [
+          "alltrails-88e15"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "alltrails-88e15"
+  }
+}
