@@ -1,0 +1,19 @@
+<div class="intro-wrapper">
+    <div class="login-box">
+        <h2>AllTrails</h2>
+        <h4>Create an account</h4>
+            <form [formGroup]="signUpForm" (ngSubmit)="onSignUp()">
+            <div class="email">
+                <label for="email">Email:</label>
+                <input type="text" formControlName="email">
+            </div>
+            <div class="password">
+                <label for="password">Password:</label>
+                <input type="text" formControlName="password">
+            </div>
+            <p>*Password must be at least 6 characters</p>
+            <button type="submit">Sign Up</button>
+            </form>
+        <p id="back" (click)="handleToLogin()">Back</p>
+    </div>
+</div>

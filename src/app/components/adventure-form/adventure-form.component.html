@@ -1,0 +1,40 @@
+<div class="about-form-wrapper">
+    <h2>Tell us about your adventure!</h2>
+    <form [formGroup]="adventureForm" (ngSubmit)="onSubmit()">
+        <div formGroupName="routeType" class="checkbox-grouping">
+            <label class="checkbox-cont"> Hiking
+                <input type="radio" formControlName="typeOfRoute" name="typeOfRoute" value="Hiking">
+            </label>
+            <label class="checkbox-cont"> Biking
+                <input type="radio" formControlName="typeOfRoute" name="typeOfRoute" value="Biking">
+            </label>
+            <label class="checkbox-cont"> Kayking
+                <input type="radio" formControlName="typeOfRoute" name="typeOfRoute" value="Kayaking">
+            </label>
+        </div>
+        <div class="about-input-fields">
+            <label>
+                Trail Name:
+                <input class="name-input" formControlName="name" type="text" placeholder="Name of route" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Name of route'">
+            </label>
+            <label>
+                Trail Location:
+                <input class="name-input" formControlName="location" type="text" placeholder="City/State" onfocus="this.placeholder = ''" onblur="this.placeholder = 'City/State or park'">
+            </label>
+            <label>
+                Date:
+                <input class="name-input" formControlName="date" type="text" placeholder="dd/mm/yy" onfocus="this.placeholder = ''" onblur="this.placeholder = 'dd/mm/yy'">
+            </label>
+            <label id="note-textarea">
+                Notes:
+                <textarea formControlName="note" placeholder="Tell the story!" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Tell the story!'"></textarea>
+            </label>
+            <div class="button-box">
+                <button type="submit" class="about-submit">Submit</button>
+                <button class="about-back" [routerLink]="['/account']">Back</button>
+            </div>
+        </div>
+    </form>
+</div>
+
+    

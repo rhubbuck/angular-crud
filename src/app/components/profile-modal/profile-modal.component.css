@@ -1,0 +1,58 @@
+.modal-container {
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    border: 1px solid #fff;
+    border-radius: 5px;
+    padding: 20px;
+    background-color: rgba(0, 5, 66, 1);
+}
+
+.back {
+    text-decoration: underline;
+    text-align: right;
+    font-size: 14px;
+    margin-bottom: -10px;
+    cursor: pointer;
+}
+
+a {
+    color:#fff;
+}
+
+
+h3 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 28px;
+}
+
+.user-location, .user-bio {
+    margin: 10px 0;
+}
+
+.user-bio {
+    margin-bottom: 20px;
+}
+
+
+@media only screen and (min-width: 475px) {
+    h3 {
+        font-size: 30px;
+    }
+
+    .user-location, .user-bio {
+        font-size: 18px;
+    }
+
+    .back {
+        font-size: 16px;
+    }
+ 
+}
+ 

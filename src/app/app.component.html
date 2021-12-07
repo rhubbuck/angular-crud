@@ -1,0 +1,18 @@
+<div class="app">
+  <app-login (isLogin)="handleLogin()" (toSignup)="handleToSignup()" *ngIf="!isSignedIn && !isSignup" ></app-login>
+  <app-signup *ngIf="isSignup" (toLogin)="handleToLogin()"></app-signup>
+  <app-header (isLogout)="handleLogout()" *ngIf="isSignedIn" ></app-header>
+  <router-outlet *ngIf="isSignedIn" ></router-outlet>
+  
+  <!-- <app-profile-modal></app-profile-modal> -->
+  <!-- <app-about-form></app-about-form> -->
+  <!-- <app-feed></app-feed> -->
+  <!-- <app-adventure-form></app-adventure-form> -->
+  <!-- <app-home></app-home> -->
+  
+  
+    <!-- <app-your-account></app-your-account> -->
+
+ 
+</div>
+

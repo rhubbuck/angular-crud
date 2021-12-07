@@ -1,0 +1,60 @@
+<div class="your-account-container">
+    <h2>Your Account</h2>
+   
+    <div *ngFor="let profile of profiles; index as i" class="info-container">
+        <h3>{{profile.name}}</h3>
+        <h3>{{profile.location}}</h3>
+        <h4>{{profile.bio}}</h4>
+        <button class="add-adventures" [routerLink]="['/adventure-form']">Add a trail</button>
+    </div>
+    <div class="about-button-box">
+        <button class="account-about" [routerLink]="['/account-about']">Update your account</button>
+    </div>
+    <div class="your-adventures">
+        <h2>Your Trails</h2>
+        <div class="your-trails-container">
+        <ul *ngFor="let trail of trails; index as i">
+            <li class="trail">
+                <p class="trail-title">{{trail.name}}</p>
+                <p class="trail-type">{{trail.routeType?.typeOfRoute}}</p>
+                <p class="traildate">{{trail.date}}</p>
+                <p class="trail-location">{{trail.location}}</p>
+                <p class="trail-description">{{trail.note}}</p>
+                <div class="icons">
+                    <a class="secondary-content"><i (click)="editItem($event, trail)"><fa-icon [icon]="faEdit"></fa-icon></i></a>
+                    <a *ngIf="editState && itemToEdit.id == trail.id" class="secondary-content"><i (click)="clearState()"><fa-icon [icon]="faWindowClose"></fa-icon></i></a>
+                </div>
+                <div *ngIf="editState && itemToEdit.id == trail.id">
+                    <form (ngSubmit)="updateItem(trail)">
+                        <div formGroupName="routeType" class="checkbox-grouping">
+                            <label class="checkbox-cont"> Hiking
+                                <input type="radio" formControlName="typeOfRoute" name="typeOfRoute" value="hiking">
+                            </label>
+                            <label class="checkbox-cont"> Biking
+                                <input type="radio" formControlName="typeOfRoute" name="typeOfRoute" value="biking">
+                            </label>
+                            <label class="checkbox-cont"> Kayking
+                                <input type="radio" formControlName="typeOfRoute" name="typeOfRoute" value="kayaking">
+                            </label>
+                        </div>
+                        <div class="about-input-fields">
+                            <div class="inputs">
+                                <input class="update-input-field" type="text" placeholder="Name of route" [(ngModel)]="trail.name" name="name">
+                                <input class="update-input-field" type="text" placeholder="City/State" [(ngModel)]="trail.location" name="location">
+                                <input class="update-input-field" type="text" placeholder="dd/mm/yy" [(ngModel)]="trail.date" name="date">
+                            </div>
+                            <div class="textarea">
+                                <textarea  placeholder="Tell the story!" [(ngModel)]="trail.note" name="note"></textarea>
+                            </div>
+                        </div>
+                        <div class="form-buttons">
+                            <button id="submit-button" type="submit" (click)="updateItem(trail)" class="about-submit">Update</button>
+                            <button id="delete-button" (click)="deleteTrail($event, trail)">Delete</button>
+                        </div>
+                    </form>
+                </div>
+            </li>
+        </ul>
+        </div>
+    </div>
+</div>

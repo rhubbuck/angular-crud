@@ -1,0 +1,23 @@
+<div class="about-form-wrapper">
+<h2>About You</h2>
+<form [formGroup]="aboutForm" (ngSubmit)="onSubmit()">
+<div class="about-input-fields">
+    <label>
+        Name:
+        <input class="name-input" formControlName="name" type="text" placeholder="Your name." onfocus="this.placeholder = ''" onblur="this.placeholder = 'Your name.'">
+    </label>
+    <label>
+        Bio:
+        <textarea class="bio-input" formControlName="bio" placeholder="Share your story." onfocus="this.placeholder = ''" onblur="this.placeholder = 'Share your story.'"></textarea>
+    </label>
+    <label>
+        Location: 
+        <input type="text" class="location-input" formControlName="location"  placeholder="Where do you live?" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Where do you live?'">
+    </label>
+    <div class="button-box">
+        <button type="submit" class="about-submit">Submit</button>
+        <button class="back" [routerLink]="['/account']">Back</button>
+    </div>
+</div>
+</form>
+</div>

@@ -1,0 +1,6 @@
+.app {
+    background-image: url('../assets/Images/Main-background.jpg');
+    height: 100vh;
+    background-size: cover; 
+}
+

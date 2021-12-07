@@ -1,0 +1,66 @@
+.header-wrapper {
+    height: 50px;
+    background-color: rgba(0, 5, 66, .7);
+    color: #fff;
+    width: 100%;
+    border-bottom: 1px solid #fff;
+}
+
+.logo-wrapper {
+    width: 60%;
+   
+}
+
+.logo {
+    cursor: pointer;
+}
+
+h2 {
+    font-family: 'Freckle face', cursive;
+    letter-spacing: .2rem;
+    font-size: 24px;
+    margin-left: 10px;
+    margin-top: 5px;
+}
+
+p {
+    cursor: pointer;
+    font-size: 10px;
+    margin-top: 5px;
+}
+
+.content-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 5px;
+}
+
+.nav-container {
+    display: flex;
+    width: 40%;
+    flex-direction: row;
+    justify-content: space-evenly;
+    list-style-type: none;
+}
+
+@media only screen and (min-width: 475px) {
+   p {
+       font-size: 12px;
+   }
+
+   h2 {
+       font-size: 26px;
+   }
+}
+
+@media only screen and (min-width: 769px) {
+    p {
+        font-size: 14px;
+    }
+
+    h2 {
+        font-size: 30px;
+    }
+}

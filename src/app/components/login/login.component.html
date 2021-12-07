@@ -1,0 +1,18 @@
+<div class="intro-wrapper">
+<div class="login-box">
+    <h2>AllTrails</h2>
+    <form [formGroup]="signInForm" (ngSubmit)="onSignIn()">
+        <div class="email">
+            <label for="email">Email:</label>
+            <input type="text" formControlName="email">
+        </div>
+        <div class="password">
+            <label for="password">Password:</label>
+            <input type="password" formControlName="password">
+        </div>
+        <button type="submit" [routerLink]="['/home']">Sign In</button>
+    </form>
+    <p>Don't have an account? <a (click)="handleToSignup()">Sign up here!</a></p>
+</div>
+</div>
+

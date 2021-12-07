@@ -1,0 +1,157 @@
+.your-account-container {
+    margin: 20px;
+    color: #fff;
+    height: 90vh;
+    overflow-y: scroll; 
+}
+
+h2 {
+    text-align: center;
+    margin: 10px 0;
+    font-size: 26px;
+    text-decoration: underline;
+}
+
+h3, h4 {
+    margin: 8px 0;
+}
+
+li {
+    list-style-type: none;
+}
+
+a {
+    cursor: pointer;
+}
+
+button {
+    margin: 5px 0;
+    cursor: pointer;
+    border-radius: 3px;
+    padding: 6px;
+}
+
+.no-adventures {
+    font-size: 18px;
+}
+
+.your-adventures {
+    margin-top: 30px;
+}
+
+.your-adventures-container {
+    margin: 10px 0;
+}
+
+.add-adventures {
+    background-color: rgba(114, 236, 0, .8);
+}
+
+.about-button-box {
+    width: 100%;
+    display: flex;
+    justify-content: center
+}
+
+.account-about {
+    background-color: rgba(255, 155, 0, 0.8);
+}
+
+.trail {
+    border-bottom: 1px solid #000;
+    border-top: 1px solid #000;
+    margin: 8px;
+    padding: 0 10px;
+    background-color: rgba(255, 255, 255, .8);
+    border-radius: 5px;
+    color: #000;
+}
+
+.trail p {
+    margin: 8px 0;
+}
+
+.icons {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+form {
+    margin: 10px;
+}
+
+textarea {
+    width: 220px;
+    height: 70px;
+    margin: 5px 0;
+}
+
+.form-buttons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#submit-button {
+    background-color: rgb(233, 159, 22);
+    color: #fff;
+    margin: 0 4px;
+    font-weight: bold;
+}
+
+#delete-button {
+    background-color: rgb(247, 36, 21);
+    color: #fff;
+    margin: 0 4px;
+    font-weight: bold;
+}
+
+@media only screen and (min-width: 475px) {
+    .your-account-container {
+        padding: 0 80px;
+    }
+
+    .info-container {
+        text-align: center;
+        }
+    
+    h2 {
+        font-size: 32px;
+    }
+
+    textarea {
+        width: 501px;
+    }
+
+    .checkbox-cont {
+        margin: 0 40px;
+    }
+}
+ 
+ @media only screen and (min-width: 769px) {
+   .your-account-container {
+       padding: 0 160px;
+   }
+
+   .inputs {
+       display: flex;
+       justify-content: space-between;
+       width: 880px;
+   }
+
+   .textarea {
+       display: flex;
+       justify-content: center;
+       width: 880px;
+   }
+
+   textarea {
+       width: 880px;
+   }
+
+   .update-input-field {
+       width: 250px;
+   }
+
+ }
+ 

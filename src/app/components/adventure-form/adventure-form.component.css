@@ -1,0 +1,100 @@
+.about-form-wrapper {
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    border: 1px solid #fff;
+    border-radius: 5px;
+    padding: 20px;
+    background-color: rgba(0, 5, 66, 1);
+}
+
+.background {
+    background-color: rgba(0, 0, 0, .2);
+    height: 100vh;
+    width: 100vw;
+}
+
+h2, h4 {
+    text-align: center;
+}
+
+h2 {
+    margin-bottom: 20px;
+    border-bottom: 1px solid #fff;
+}
+
+h4 {
+    margin: 20px 0;
+}
+
+label {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 5px 0;
+}
+
+.name-input {
+    width: 170px;
+}
+
+textarea {
+    width: 170px;
+    height: 80px;
+}
+
+#note-textarea {
+    height: 80px;
+}
+
+.about-input-fields {
+    display: flex;
+    flex-direction: column;
+}
+
+.checkbox-grouping {
+   margin-bottom: 20px;
+}
+
+.about-submit {
+    margin-top: 10px;
+    cursor: pointer;
+    width: 40%;
+}
+
+.about-back {
+    margin-top: 10px;
+    cursor: pointer;
+    width: 40%;
+}
+
+.button-box {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+@media only screen and (min-width: 475px) {
+    .name-input {
+        width: 220px;
+    }
+
+    textarea {
+        width: 300px;
+    }
+
+ }
+ 
+ @media only screen and (min-width: 769px) {
+
+    textarea {
+        width: 400px;
+    }
+ }
+ 
