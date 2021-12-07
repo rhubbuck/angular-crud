@@ -34,15 +34,11 @@ export class YourAccountComponent implements OnInit {
     this.crudService.getTrails().subscribe(trails => {
       trails.map(trail => {
         this.username = trail.user
-        // console.log(this.username);
-        // console.log(this.currentUser);
       });
       this.trails = trails.filter(item => item.user === this.currentUser)  
     });
 
     this.crudService.getProfile().subscribe(profiles => {
-      // this.profiles = profiles;
-      // console.log(this.profiles)
       this.profiles = profiles.filter(item => item.user === this.currentUser)
       console.log(this.profiles)
     })
@@ -60,7 +56,6 @@ export class YourAccountComponent implements OnInit {
   }
 
   updateItem(trail: any){
-    // console.log('update');
     this.crudService.updateTrail(trail);
     this.clearState();
   }

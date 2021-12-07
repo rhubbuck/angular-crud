@@ -14,16 +14,10 @@ export class HeaderComponent implements OnInit {
   constructor( public authService: AuthService) { }
 
   ngOnInit(): void {
-    // if (localStorage.getItem('user') !== null) {
-    //   this.isSignedIn = true;
-    // } else {
-    //   this.isSignedIn = false;
-    // }
+   
   }
 
   handleLogout() {
-    // this.isSignedIn = false;
-    // console.log(this.isSignedIn)
     this.authService.logout();
     this.isLogout.emit()
   }
