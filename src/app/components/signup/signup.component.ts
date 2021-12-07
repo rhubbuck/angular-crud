@@ -33,19 +33,11 @@ export class SignupComponent implements OnInit {
     });
   }
 
-  // onSignUp() {
-  //   let emailValue = this.signUpForm.get('email')?.value;
-  //   let passwordValue = this.signUpForm.get('password')?.value;
-  //   console.log(emailValue);
-  //   console.log(passwordValue);
-  // }
-
   async onSignUp() {
     let emailValue = this.signUpForm.get('email')?.value;
     let passwordValue = this.signUpForm.get('password')?.value;
 
     await this.authService.signUp(emailValue, passwordValue);
-    console.log(emailValue, passwordValue)
       if(this.authService.isLoggedIn) 
         this.isSignedIn = true
       this.signUpForm.reset();

@@ -42,8 +42,6 @@ export class AdventureFormComponent implements OnInit {
   ngOnInit(): void {
     
     this.crudService.getProfile().subscribe(profiles => {
-      // this.profiles = profiles;
-      // console.log(this.profiles)
       this.profiles = profiles.filter(item => item.user === this.currentUser)
       this.creatorName = this.profiles[0].name;
       console.log(this.creatorName);
