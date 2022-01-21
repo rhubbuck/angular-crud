@@ -1,12 +1,11 @@
 <div class="feed-container">
-    <h2>Trail Feed</h2>
+    <h2 class="feed-headline">Trail Feed</h2>
     <div class="trails-container">
         <ul *ngFor="let trail of trails; index as i">
             <li  class="trail">
-                <p class="trail-title">{{trail.name}}</p>
-                <p class="trail-type">{{trail.routeType?.typeOfRoute}}</p>
-                <p class="traildate">{{trail.date}}</p>
+                <p class="trail-title">{{trail.name}}-{{trail.date}}</p>
                 <p class="trail-location">{{trail.location}}</p>
+                <p class="trail-type">{{trail.routeType?.typeOfRoute}}</p>
                 <p class="trail-description">{{trail.note}}</p>
                 <p class="trail-creator" >{{trail.creatorName}}</p>
             </li>

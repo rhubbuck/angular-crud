@@ -1,152 +1,185 @@
 .feed-container {
-    padding: 0 20px;
-    margin: 20px 0;
-    height: 90vh;
-    overflow-y: scroll;   
+  padding: 0 20px;
+  margin: 20px 30px;
+  height: 95vh;
+  overflow-y: scroll;
 }
 
-h2 {
-    text-align: center;
-    margin-bottom: 30px;
-    font-size: 28px;
-    color: #fff;
+/* Hide scrollbar for Chrome, Safari and Opera */
+.feed-container::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.feed-container {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.feed-headline {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 36px;
+  color: #fff;
+  font-family: "Baloo 2", cursive;
 }
 
 h4 {
-    color: #fff;
+  color: #fff;
 }
 
 .nav-container {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
 }
 
 .nav-options {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    list-style-type: none;
-    margin: 10px 0 ;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  list-style-type: none;
+  margin: 10px 0;
 }
 
 li {
-    margin: 2px;
+  margin: 2px;
 }
 
 button {
-    width: 80px;
-    height: 32px;
-    border-radius: 3px;
-    cursor: pointer;
+  width: 80px;
+  height: 32px;
+  border-radius: 3px;
+  cursor: pointer;
 }
 
 #hiking-button {
-    background-color: rgb(255, 95, 95);
+  background-color: rgb(255, 95, 95);
 }
 
 #biking-button {
-    background-color: rgb(88, 230, 255);
+  background-color: rgb(88, 230, 255);
 }
 
 #kayaking-button {
-    background-color: rgb(83, 255, 83);
+  background-color: rgb(83, 255, 83);
 }
 
 .trails-container {
-    display: grid;
+  display: grid;
 }
 
 .trail {
-    border-bottom: 1px solid #000;
-    border-top: 1px solid #000;
-    margin: 8px;
-    padding: 0 10px;
-    background-color: rgba(255, 255, 255, .8);
-    border-radius: 5px;
-    list-style-type: none;
+  border-bottom: 1px solid #000;
+  border-top: 1px solid #000;
+  margin: 4px;
+  padding: 0 10px;
+  background-color: rgba(255, 255, 255, 1);
+  border-radius: 2px;
+  list-style-type: none;
 }
 
-.trail-creator {
-    cursor: pointer;
+.trail-title,
+.trail-location {
+  font-size: 18px;
 }
 
 .trail p {
-    margin: 8px 0;
+  margin: 8px 0;
+}
+
+.trail-type,
+.trail-creator {
+  padding-left: 30px;
+  font-size: 14px;
+}
+
+.trail-description {
+  padding: 0 30px;
+  font-size: 16px;
+}
+
+.trail-creator {
+  text-align: right;
 }
 
 .modal-container {
-    display: flex;
-    flex-direction: column;
-    color: #fff;
-    position:absolute;
-    top: 50%;
-    left: 50%;
-    margin-right: -50%;
-    transform: translate(-50%, -50%);
-    border: 1px solid #fff;
-    border-radius: 5px;
-    padding: 20px;
-    background-color: rgba(0, 5, 66, 1);
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  border: 1px solid #fff;
+  border-radius: 5px;
+  padding: 20px;
+  background-color: rgba(0, 5, 66, 1);
 }
 
 .back {
-    text-decoration: underline;
-    text-align: right;
-    font-size: 14px;
-    margin-bottom: -10px;
-    cursor: pointer;
+  text-decoration: underline;
+  text-align: right;
+  font-size: 14px;
+  margin-bottom: -10px;
+  cursor: pointer;
 }
 
 a {
-    color:#fff;
+  color: #fff;
 }
-
 
 h3 {
-    text-align: center;
-    margin-bottom: 20px;
-    font-size: 28px;
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 28px;
 }
 
-.user-location, .user-bio {
-    margin: 10px 0;
+.user-location,
+.user-bio {
+  margin: 10px 0;
 }
 
 .user-bio {
-    margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 
 @media only screen and (min-width: 475px) {
-    .feed-container {
-        padding: 0 80px;
-    }
+  .feed-container {
+    padding: 0 80px;
+    margin: 20px 40px;
+  }
 
-    h2 {
-        font-size: 34px;
-    }
+  h2 {
+    font-size: 34px;
+  }
 
-    h3 {
-        font-size: 30px;
-    }
+  h3 {
+    font-size: 30px;
+  }
 
-    .user-location, .user-bio {
-        font-size: 18px;
-    }
+  .feed-headline {
+    font-size: 46px;
+  }
 
-    .back {
-        font-size: 16px;
-    }
- }
- 
- @media only screen and (min-width: 769px) {
-   .feed-container {
-       padding: 0 160px;
-   }
+  .user-location,
+  .user-bio {
+    font-size: 18px;
+  }
 
-   h2 {
-    font-size: 38px;
+  .back {
+    font-size: 16px;
+  }
 }
 
- }
- 
+@media only screen and (min-width: 769px) {
+  .feed-container {
+    padding: 0 160px;
+    margin: 20px 100px;
+  }
+
+  h2 {
+    font-size: 38px;
+  }
+}

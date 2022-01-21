@@ -1,23 +1,23 @@
 <div class="your-account-container">
-    <h2>Your Account</h2>
+    <h2 class="account-headline">Your Account</h2>
    
     <div *ngFor="let profile of profiles; index as i" class="info-container">
-        <h3>{{profile.name}}</h3>
-        <h3>{{profile.location}}</h3>
-        <h4>{{profile.bio}}</h4>
+        <h3>{{profile.name}} - {{profile.location}}</h3>
+       
+        <h4 class="profile-bio">{{profile.bio}}</h4>
         <button class="add-adventures" [routerLink]="['/adventure-form']">Add a trail</button>
     </div>
     <div class="about-button-box">
         <button class="account-about" [routerLink]="['/account-about']">Update your account</button>
     </div>
     <div class="your-adventures">
-        <h2>Your Trails</h2>
+        <h2 class="trail-headline">Your Trails</h2>
         <div class="your-trails-container">
         <ul *ngFor="let trail of trails; index as i">
             <li class="trail">
                 <p class="trail-title">{{trail.name}}</p>
                 <p class="trail-type">{{trail.routeType?.typeOfRoute}}</p>
-                <p class="traildate">{{trail.date}}</p>
+                <p class="trail-date">{{trail.date}}</p>
                 <p class="trail-location">{{trail.location}}</p>
                 <p class="trail-description">{{trail.note}}</p>
                 <div class="icons">
