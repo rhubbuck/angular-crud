@@ -51,10 +51,6 @@ button {
 .no-adventures {
   font-size: 18px;
 }
-/* 
-.your-adventures {
-  margin: 30px 100px 0;
-} */
 
 .your-adventures-container {
   margin: 10px 0;
@@ -179,17 +175,17 @@ textarea {
   .inputs {
     display: flex;
     justify-content: space-between;
-    width: 880px;
+    width: 40%;
   }
 
   .textarea {
     display: flex;
     justify-content: center;
-    width: 880px;
+    width: 100%;
   }
 
   textarea {
-    width: 880px;
+    width: 100%;
   }
 
   .update-input-field {
